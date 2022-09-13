@@ -152,16 +152,16 @@ class CreateShrekToyProduct implements DataPatchInterface
     }
 
     /**
+     * @return void
      * @throws Exception
      */
-    public function apply()
+    public function apply(): void
     {
         $this->appState->emulateAreaCode('adminhtml', [$this, 'execute']);
-
-        return $this;
     }
 
     /**
+     * @return void
      * @throws CouldNotSaveException
      * @throws LocalizedException
      * @throws NoSuchEntityException
@@ -169,7 +169,7 @@ class CreateShrekToyProduct implements DataPatchInterface
      * @throws StateException
      * @throws InputException
      */
-    public function execute()
+    public function execute(): void
     {
         $files = [
             'shrek.jpg'
